@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Way Binding - Exercise 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="color-app">
+        <label>
+            <input type="radio" value="red" v-model="color"> Rouge
+        </label>
+        <label>
+            <input type="radio" value="blue" v-model="color"> Bleu
+        </label>
+        <label>
+            <input type="radio" value="green" v-model="color"> Vert
+        </label>
+        <br>
+        <input type="checkbox" v-model="showParagraph"> Afficher le paragraphe
+        <p v-if="showParagraph" :style="{ color: color }">Ceci est un texte coloré.</p>
+    </div>
+    <script src="js/twoWayBinding.js"></script>
+</body>
+</html>
